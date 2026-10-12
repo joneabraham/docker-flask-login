@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h1>Create account</h1>
+<form method="post">
+  <label for="username">Username</label>
+  <input id="username" name="username" type="text" minlength="3" required autofocus>
+  <label for="password">Password (8+ characters)</label>
+  <input id="password" name="password" type="password" minlength="8" required>
+  <button type="submit">Register</button>
+</form>
+<p class="muted">Already registered? <a href="{{ url_for('auth.login') }}">Log in</a></p>
+{% endblock %}
